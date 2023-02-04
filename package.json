@@ -3,8 +3,8 @@
     "start": "node src/index.js",
     "dev": "DB_FILE=db.sqlite nodemon src/index.js",
     "seed": "DB_FILE=db.sqlite node src/database/seed.js",
-    "test": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings --test",
-    "test:1": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/one.test.js",
+    "test": "SET DB_FILE=test.sqlite & node -r ./src/database/seed.js --no-warnings --test",
+    "test:1": "SET DB_FILE=test.sqlite & node -r ./src/database/seed.js --no-warnings test/one.test.js",
     "test:2": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/two.test.js",
     "test:3": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/three.test.js",
     "test:4": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/four.test.js",
@@ -12,7 +12,7 @@
     "test:6": "DB_FILE=test.sqlite node -r ./src/database/seed.js --no-warnings test/six.test.js"
   },
   "dependencies": {
-    "better-sqlite3": "^7.5.3",
+    "better-sqlite3": "^7.6.2",
     "express": "^4.18.1"
   },
   "devDependencies": {
